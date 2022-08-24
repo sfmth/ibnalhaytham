@@ -1,0 +1,164 @@
+[*]
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Wed Aug 24 10:47:16 2022
+[*]
+[dumpfile] "/home/farhad/Projects/rv32i_tapeout/wrapped_ibnalhaytham.vcd"
+[dumpfile_mtime] "Wed Aug 24 10:25:51 2022"
+[dumpfile_size] 159120
+[savefile] "/home/farhad/Projects/rv32i_tapeout/wrapped_ibnalhaytham.gtkw"
+[timestart] 3822200000
+[size] 1920 1029
+[pos] -1 -1
+*-26.000000 3980000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] wrapped_ibnalhaytham.
+[treeopen] wrapped_ibnalhaytham.core1.
+[treeopen] wrapped_ibnalhaytham.core1.processor_1.
+[sst_width] 273
+[signals_width] 314
+[sst_expanded] 1
+[sst_vpaned_height] 292
+@28
+wrapped_ibnalhaytham.core1.clk
+@200
+-
+@c00028
+wrapped_ibnalhaytham.core1.io_in[6:0]
+@28
+(0)wrapped_ibnalhaytham.core1.io_in[6:0]
+(1)wrapped_ibnalhaytham.core1.io_in[6:0]
+(2)wrapped_ibnalhaytham.core1.io_in[6:0]
+(3)wrapped_ibnalhaytham.core1.io_in[6:0]
+(4)wrapped_ibnalhaytham.core1.io_in[6:0]
+(5)wrapped_ibnalhaytham.core1.io_in[6:0]
+(6)wrapped_ibnalhaytham.core1.io_in[6:0]
+@1401200
+-group_end
+@28
+wrapped_ibnalhaytham.core1.stall
+wrapped_ibnalhaytham.core1.processor_1.stall_1
+wrapped_ibnalhaytham.core1.processor_1.stall_2
+wrapped_ibnalhaytham.core1.processor_1.stall_3
+wrapped_ibnalhaytham.core1.reset
+wrapped_ibnalhaytham.core1.processor_1.flush_e
+wrapped_ibnalhaytham.core1.processor_1.flush_d
+wrapped_ibnalhaytham.core1.processor_1.flush_f
+@200
+-
+@28
+wrapped_ibnalhaytham.core1.processor_1.pc_src_e
+wrapped_ibnalhaytham.core1.processor_1.pc_src_e_hold
+@22
+wrapped_ibnalhaytham.core1.processor_1.pc_f_next[31:0]
+wrapped_ibnalhaytham.core1.processor_1.pc_f_next_not_stall[31:0]
+wrapped_ibnalhaytham.core1.processor_1.pc_target_e[31:0]
+wrapped_ibnalhaytham.core1.processor_1.pc_f[31:0]
+wrapped_ibnalhaytham.core1.processor_1.pc_d[31:0]
+wrapped_ibnalhaytham.core1.processor_1.pc_e[31:0]
+wrapped_ibnalhaytham.core1.processor_1.pc_plus4_m[31:0]
+@200
+-
+@23
+wrapped_ibnalhaytham.core1.processor_1.inst_f[31:0]
+@22
+wrapped_ibnalhaytham.core1.processor_1.inst_d[31:0]
+wrapped_ibnalhaytham.core1.memcon1.inst_mem_addr[31:0]
+wrapped_ibnalhaytham.core1.memcon1.inst_mem_read[31:0]
+@200
+-
+@28
+wrapped_ibnalhaytham.core1.processor_1.mem_write_m
+@24
+wrapped_ibnalhaytham.core1.memcon1.data_mem_addr[31:0]
+wrapped_ibnalhaytham.core1.memcon1.data_mem_read[31:0]
+wrapped_ibnalhaytham.core1.processor_1.write_data_m[31:0]
+@800022
+wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+@800024
+#{wrapped_ibnalhaytham.core1.memcon1.io_out[20:16]} (0)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (1)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (2)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (3)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (4)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+@c00024
+#{wrapped_ibnalhaytham.core1.memcon1.io_out[15:0]} (5)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (6)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (7)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (8)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (9)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (10)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (11)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (12)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (13)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (14)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (15)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (16)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (17)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (18)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (19)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0] (20)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+@28
+(5)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(6)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(7)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(8)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(9)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(10)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(11)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(12)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(13)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(14)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(15)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(16)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(17)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(18)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(19)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+(20)wrapped_ibnalhaytham.core1.memcon1.io_out[20:0]
+@1401204
+-group_end
+@1001204
+-group_end
+-group_end
+@1001200
+-group_end
+@200
+-
+@24
+wrapped_ibnalhaytham.core1.processor_1.alu_result_m[31:0]
+wrapped_ibnalhaytham.core1.processor_1.src_a_e[31:0]
+wrapped_ibnalhaytham.core1.processor_1.src_b_e[31:0]
+@22
+wrapped_ibnalhaytham.core1.processor_1.alu_control_d[4:0]
+wrapped_ibnalhaytham.core1.processor_1.alu_control_e[4:0]
+@200
+-
+@24
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.address_1[4:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.address_2[4:0]
+wrapped_ibnalhaytham.core1.processor_1.rd1_d[31:0]
+wrapped_ibnalhaytham.core1.processor_1.rd1_e[31:0]
+wrapped_ibnalhaytham.core1.processor_1.rd2_d[31:0]
+wrapped_ibnalhaytham.core1.processor_1.rd2_e[31:0]
+@200
+-
+@28
+wrapped_ibnalhaytham.core1.processor_1.reg_write_d
+wrapped_ibnalhaytham.core1.processor_1.reg_write_e
+wrapped_ibnalhaytham.core1.processor_1.reg_write_m
+wrapped_ibnalhaytham.core1.processor_1.reg_write_w
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.write_enable
+@22
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.address_3[4:0]
+@24
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.write_data[31:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.reg0[31:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.reg1[31:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.reg2[31:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.reg3[31:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.reg4[31:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.reg5[31:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.reg7[31:0]
+wrapped_ibnalhaytham.core1.processor_1.regfile_1.reg9[31:0]
+@200
+-
+@22
+wrapped_ibnalhaytham.core1.memcon1.inst_mem_addr[31:0]
+wrapped_ibnalhaytham.core1.memcon1.inst_mem_addr_1[31:0]
+wrapped_ibnalhaytham.core1.memcon1.la_data_out[31:0]
+wrapped_ibnalhaytham.la1_data_out[31:0]
+wrapped_ibnalhaytham.core1.buf_la1_data_out[31:0]
+wrapped_ibnalhaytham.core1.memcon1.la_data_out_inst_addr[31:0]
+@200
+-
+@22
+wrapped_ibnalhaytham.core1.memcon1.la_oenb[31:0]
+wrapped_ibnalhaytham.core1.memcon1.la_oenb_1[31:0]
+wrapped_ibnalhaytham.core1.memcon1.la_data_in[31:0]
+@200
+-
+@28
+wrapped_ibnalhaytham.core1.processor_1.flush_d
+wrapped_ibnalhaytham.core1.processor_1.flush_e
+[pattern_trace] 1
+[pattern_trace] 0

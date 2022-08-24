@@ -1,0 +1,50 @@
+[*]
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Tue Jul 19 09:28:54 2022
+[*]
+[dumpfile] "/home/farhad/Courses/zerotoasic/p2.1/rgb_mixer/rgb_mixer.vcd"
+[dumpfile_mtime] "Tue Jul 19 09:27:55 2022"
+[dumpfile_size] 374142
+[savefile] "/home/farhad/Courses/zerotoasic/p2.1/rgb_mixer/rgb_mixer.gtkw"
+[timestart] 0
+[size] 1129 1019
+[pos] -1 -1
+*-17.465410 20921000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] rgb_mixer.
+[sst_width] 211
+[signals_width] 146
+[sst_expanded] 1
+[sst_vpaned_height] 475
+@28
+rgb_mixer.clk
+rgb_mixer.reset
+@200
+-
+@28
+rgb_mixer.dbnc0_a.debounced
+rgb_mixer.dbnc0_b.debounced
+@200
+-
+@28
+rgb_mixer.enc_0.oa
+rgb_mixer.enc_0.ob
+@200
+-
+@29
+rgb_mixer.enc_0.all[3:0]
+@200
+-
+@24
+rgb_mixer.enc_0.value[7:0]
+@8024
+rgb_mixer.enc0[7:0]
+rgb_mixer.enc1[7:0]
+rgb_mixer.enc2[7:0]
+@200
+-
+@28
+rgb_mixer.pwm0_out
+rgb_mixer.pwm1_out
+rgb_mixer.pwm2_out
+[pattern_trace] 1
+[pattern_trace] 0

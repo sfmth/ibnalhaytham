@@ -1,0 +1,66 @@
+[*]
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Tue Aug 23 15:03:13 2022
+[*]
+[dumpfile] "/home/farhad/Projects/rv32i_tapeout/memory_controler.vcd"
+[dumpfile_mtime] "Tue Aug 23 15:02:36 2022"
+[dumpfile_size] 9826
+[savefile] "/home/farhad/Projects/rv32i_tapeout/memory_controler.gtkw"
+[timestart] 0
+[size] 1920 1029
+[pos] 0 27
+*-26.000000 305000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 275
+[signals_width] 276
+[sst_expanded] 1
+[sst_vpaned_height] 292
+@28
+memory_controler.clk
+memory_controler.reset
+memory_controler.stall
+@200
+-
+@24
+memory_controler.io_in[1:0]
+@22
+memory_controler.inst_mem_addr[31:0]
+memory_controler.inst_mem_read[31:0]
+@200
+-
+-rambus
+-
+-la:
+@22
+memory_controler.la_data_in[31:0]
+memory_controler.la_data_out[31:0]
+memory_controler.la_oenb[31:0]
+@200
+-
+@c00023
+memory_controler.io_out[20:0]
+@28
+(0)memory_controler.io_out[20:0]
+(1)memory_controler.io_out[20:0]
+(2)memory_controler.io_out[20:0]
+(3)memory_controler.io_out[20:0]
+(4)memory_controler.io_out[20:0]
+(5)memory_controler.io_out[20:0]
+(6)memory_controler.io_out[20:0]
+(7)memory_controler.io_out[20:0]
+(8)memory_controler.io_out[20:0]
+(9)memory_controler.io_out[20:0]
+(10)memory_controler.io_out[20:0]
+(11)memory_controler.io_out[20:0]
+(12)memory_controler.io_out[20:0]
+(13)memory_controler.io_out[20:0]
+(14)memory_controler.io_out[20:0]
+(15)memory_controler.io_out[20:0]
+(16)memory_controler.io_out[20:0]
+(17)memory_controler.io_out[20:0]
+(18)memory_controler.io_out[20:0]
+(19)memory_controler.io_out[20:0]
+(20)memory_controler.io_out[20:0]
+@1401201
+-group_end
+[pattern_trace] 1
+[pattern_trace] 0

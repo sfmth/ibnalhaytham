@@ -1,0 +1,12 @@
+[options]
+mode cover
+depth 50
+[engines]
+smtbmc
+
+[script]
+read -formal data_memory.v
+prep -top data_memory
+
+[files]
+src/data_memory.v

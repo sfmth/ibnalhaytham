@@ -1,0 +1,36 @@
+[*]
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Tue Aug 16 18:31:06 2022
+[*]
+[dumpfile] "/home/farhad/Projects/rv32i_tapeout/properties/engine_0/trace0.vcd"
+[dumpfile_mtime] "Tue Aug 16 18:30:42 2022"
+[dumpfile_size] 1454
+[savefile] "/home/farhad/Projects/rv32i_tapeout/data_memory.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 349 299
+*-4.000000 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 37
+[signals_width] 180
+[sst_expanded] 0
+[sst_vpaned_height] 143
+@28
+data_memory.clk
+@200
+-
+@25
+data_memory.address[31:0]
+@200
+-
+@22
+data_memory.write_data[31:0]
+@28
+data_memory.write_enable
+@200
+-
+@22
+data_memory.read_data[31:0]
+@200
+-
+[pattern_trace] 1
+[pattern_trace] 0

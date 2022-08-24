@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Sat Aug 13 08:22:34 2022
+[*]
+[dumpfile] "/home/farhad/Projects/rv32i_tapeout/alu.vcd"
+[dumpfile_mtime] "Sat Aug 13 08:21:07 2022"
+[dumpfile_size] 2169
+[savefile] "/home/farhad/Projects/rv32i_tapeout/alu.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -488 250
+*-26.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 37
+[signals_width] 158
+[sst_expanded] 0
+[sst_vpaned_height] 143
+@28
+alu.clk
+@200
+-
+@24
+alu.alu_control[4:0]
+@200
+-
+@24
+alu.src_a[31:0]
+@420
+alu.src_b[31:0]
+@201
+-
+@420
+alu.alu_result[31:0]
+@200
+-
+@28
+alu.zero
+[pattern_trace] 1
+[pattern_trace] 0

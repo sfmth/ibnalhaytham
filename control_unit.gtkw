@@ -1,0 +1,43 @@
+[*]
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Sun Aug 14 16:27:44 2022
+[*]
+[dumpfile] "/home/farhad/Projects/rv32i_tapeout/control_unit.vcd"
+[dumpfile_mtime] "Sun Aug 14 16:05:37 2022"
+[dumpfile_size] 2534
+[savefile] "/home/farhad/Projects/rv32i_tapeout/control_unit.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] 856 103
+*-26.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 37
+[signals_width] 158
+[sst_expanded] 0
+[sst_vpaned_height] 143
+@28
+control_unit.clk
+@200
+-
+@821
+control_unit.inst[127:0]
+@28
+control_unit.op[6:0]
+control_unit.funct3[2:0]
+control_unit.funct7_5
+@200
+-
+@28
+control_unit.reg_write
+control_unit.mem_write
+control_unit.jump
+control_unit.branch
+control_unit.alu_src
+@200
+-
+@28
+control_unit.result_src[1:0]
+control_unit.imm_src[1:0]
+@24
+control_unit.alu_control[4:0]
+[pattern_trace] 1
+[pattern_trace] 0

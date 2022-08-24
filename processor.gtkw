@@ -1,0 +1,117 @@
+[*]
+[*] GTKWave Analyzer v3.3.111 (w)1999-2020 BSI
+[*] Thu Aug 18 08:41:13 2022
+[*]
+[dumpfile] "/home/farhad/Projects/rv32i_tapeout/processor.vcd"
+[dumpfile_mtime] "Thu Aug 18 08:40:58 2022"
+[dumpfile_size] 86224
+[savefile] "/home/farhad/Projects/rv32i_tapeout/processor.gtkw"
+[timestart] 0
+[size] 1920 1029
+[pos] 0 27
+*-23.765663 777280000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] processor.
+[sst_width] 211
+[signals_width] 219
+[sst_expanded] 1
+[sst_vpaned_height] 292
+@28
+processor.clk
+processor.reset
+@29
+processor.stall
+@200
+-
+-control unit:
+@28
+processor.reg_write_d
+processor.imm_src_d[1:0]
+@200
+-
+@28
+processor.branch_d
+processor.branch_e
+processor.zero_e
+processor.pc_src_e
+@22
+processor.pc_f[31:0]
+processor.pc_d[31:0]
+processor.pc_e[31:0]
+@200
+-
+@22
+processor.inst_f[31:0]
+processor.inst_d[31:0]
+@200
+-
+-Instruction memory:
+@22
+processor.inst_mem_1.address[31:0]
+processor.inst_mem_1.read_data[31:0]
+@200
+-
+-data memory:
+@28
+processor.mem_write_m
+@24
+processor.alu_result_m[31:0]
+@28
+processor.data_mem_1.write_enable
+@24
+processor.write_data_m[31:0]
+processor.data_mem_1.mem0[31:0]
+processor.data_mem_1.mem1[31:0]
+processor.data_mem_1.mem2[31:0]
+processor.data_mem_1.mem100[31:0]
+@200
+-
+-reg_file
+@22
+processor.rd1_d[31:0]
+processor.rd2_d[31:0]
+processor.rd1_e[31:0]
+processor.rd2_e[31:0]
+@28
+processor.reg_write_w
+@22
+processor.rd_d[4:0]
+processor.rd_e[4:0]
+processor.rd_m[4:0]
+processor.rd_w[4:0]
+processor.result_w[31:0]
+processor.regfile_1.reg0[31:0]
+processor.regfile_1.reg1[31:0]
+processor.regfile_1.reg2[31:0]
+@24
+processor.regfile_1.reg3[31:0]
+@22
+processor.regfile_1.reg4[31:0]
+processor.regfile_1.reg5[31:0]
+@200
+-
+-alu:
+@24
+processor.alu_control_e[4:0]
+@28
+processor.alu_src_d
+processor.alu_src_e
+@22
+processor.wire1[31:0]
+processor.src_a_e[31:0]
+processor.src_b_e[31:0]
+processor.alu_result_e[31:0]
+@28
+processor.zero_e
+@200
+-
+-hazard unit:
+@28
+processor.forward_a_e[1:0]
+processor.forward_b_e[1:0]
+processor.flush_d
+processor.flush_e
+processor.stall_f_h
+processor.stall_d_h
+processor.stall
+[pattern_trace] 1
+[pattern_trace] 0
