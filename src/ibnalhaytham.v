@@ -1,7 +1,9 @@
 `default_nettype none
 `timescale 1ns/1ns
-`include "/home/farhad/Projects/rv32i_tapeout/src/processor.v"
-`include "/home/farhad/Projects/rv32i_tapeout/src/memory_controler.v"
+
+// `include "/home/farhad/Projects/rv32i_tapeout/src/processor.v"
+// `include "/home/farhad/Projects/rv32i_tapeout/src/memory_controler.v"
+
 // `include "/home/farhad/bin/Caravel_user_project/openlane/designs/wrapped_processor/src/processor.v"
 // `include "/home/farhad/bin/Caravel_user_project/openlane/designs/wrapped_processor/src/memory_controler.v"
 

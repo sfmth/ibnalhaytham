@@ -1,11 +1,12 @@
 `default_nettype none
 `timescale 1ns/1ns
-`include "/home/farhad/Projects/rv32i_tapeout/src/mux3.v"
-`include "/home/farhad/Projects/rv32i_tapeout/src/alu.v"
-`include "/home/farhad/Projects/rv32i_tapeout/src/control_unit.v"
-`include "/home/farhad/Projects/rv32i_tapeout/src/extend.v"
-`include "/home/farhad/Projects/rv32i_tapeout/src/hazard_unit.v"
-`include "/home/farhad/Projects/rv32i_tapeout/src/register_file.v"
+
+// `include "/home/farhad/Projects/rv32i_tapeout/src/mux3.v"
+// `include "/home/farhad/Projects/rv32i_tapeout/src/alu.v"
+// `include "/home/farhad/Projects/rv32i_tapeout/src/control_unit.v"
+// `include "/home/farhad/Projects/rv32i_tapeout/src/extend.v"
+// `include "/home/farhad/Projects/rv32i_tapeout/src/hazard_unit.v"
+// `include "/home/farhad/Projects/rv32i_tapeout/src/register_file.v"
 
 // `include "/home/farhad/Projects/rv32i_tapeout/src/instruction_memory.v"
 // `include "/home/farhad/Projects/rv32i_tapeout/src/data_memory.v"
