@@ -43,15 +43,15 @@ module register_file (
 
     end
 
-    wire [31:0] reg0, reg1, reg2, reg3, reg4, reg5, reg7, reg9;
-    assign reg0 = reg_file[0];
-    assign reg1 = reg_file[1];
-    assign reg2 = reg_file[2];
-    assign reg3 = reg_file[3];
-    assign reg4 = reg_file[4];
-    assign reg5 = reg_file[5];
-    assign reg7 = reg_file[7];
-    assign reg9 = reg_file[9];
+    // wire [31:0] reg0, reg1, reg2, reg3, reg4, reg5, reg7, reg9;
+    // assign reg0 = reg_file[0];
+    // assign reg1 = reg_file[1];
+    // assign reg2 = reg_file[2];
+    // assign reg3 = reg_file[3];
+    // assign reg4 = reg_file[4];
+    // assign reg5 = reg_file[5];
+    // assign reg7 = reg_file[7];
+    // assign reg9 = reg_file[9];
     
     // integer idx;
     // initial for (idx = 0; idx < 32; idx = idx + 1) $dumpvars(0, reg_file[idx]);

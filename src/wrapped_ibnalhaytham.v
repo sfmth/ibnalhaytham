@@ -3,7 +3,7 @@
     `define MPRJ_IO_PADS 38    
 // `endif
 
-`include "/home/farhad/Projects/rv32i_tapeout/src/ibnalhaytham.v"
+// `include "/home/farhad/Projects/rv32i_tapeout/src/ibnalhaytham.v"
 
 // `define USE_WB  1
 `define USE_LA  1

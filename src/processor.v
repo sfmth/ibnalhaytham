@@ -1,6 +1,5 @@
 `default_nettype none
 `timescale 1ns/1ns
-
 // `include "/home/farhad/Projects/rv32i_tapeout/src/mux3.v"
 // `include "/home/farhad/Projects/rv32i_tapeout/src/alu.v"
 // `include "/home/farhad/Projects/rv32i_tapeout/src/control_unit.v"
@@ -139,9 +138,15 @@ module processor (
     // end
     reg stall_1, stall_2, stall_3;
     always @(posedge clk) begin
-        stall_1 <= stall;
-        stall_2 <= stall_1;
-        stall_3 <= stall_2;
+        if (reset) begin
+            stall_1 <= 0;
+            stall_2 <= 0;
+            stall_3 <= 0;
+        end else begin
+            stall_1 <= stall;
+            stall_2 <= stall_1;
+            stall_3 <= stall_2;
+        end
     end
     wire flush_d_h;
     assign flush_d = flush_e_h | flush_d_hold;
@@ -162,6 +167,8 @@ module processor (
     reg [31:0] pc_target_e_hold;
     always @(posedge clk) begin
         if (reset) begin
+            flush_d_hold <= 0;
+            flush_e_hold <= 0;
             pc_src_e_hold <= 0;
             pc_target_e_hold <= 0;
         end else if (!(stall & stall_2)) begin

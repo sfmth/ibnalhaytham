@@ -243,7 +243,11 @@ module memory_controler (
     // end
     
     always @(posedge clk) begin
-        if (io_in[1:0] == 2'd3) begin
+        if (reset) begin
+            la_data_out_inst_addr <= 0;
+            inst_mem_read <= 0;
+            stall <= 1;
+        end else if (io_in[1:0] == 2'd3) begin
             inst_mem_addr_1 <= inst_mem_addr;
             la_oenb_1 <= la_oenb;
             if (inst_mem_addr != inst_mem_addr_1 || reset) begin
