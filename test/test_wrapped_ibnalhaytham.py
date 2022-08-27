@@ -14,10 +14,10 @@ def int_2(a):
     return int(bin(a),2)
 
 async def reset(dut):
-    dut.io_in[12].value = 1
+    dut.io_in[10].value = 1
 
     await ClockCycles(dut.wb_clk_i, 5)
-    dut.io_in[12].value = 0
+    dut.io_in[10].value = 0
 
 async def la_inst_mem(dut, inst, delay, unit):
 
@@ -54,13 +54,13 @@ async def test_pwm(dut):
 
     await Timer(10, units='us')
 
-    dut.io_in[13].value = 1 # set clock input
-    dut.io_in[14].value = 0
+    dut.io_in[11].value = 1 # set clock input
+    dut.io_in[12].value = 0
     clock = Clock(dut.wb_clk_i, 10, units="us")
     cocotb.fork(clock.start())
 
-    dut.io_in[10].value = 1 # set inst_mem mode
-    dut.io_in[11].value = 1
+    dut.io_in[8].value = 1 # set inst_mem mode
+    dut.io_in[9].value = 1
 
     await reset(dut) # reset
     # dut.io_in[15].value = 0
@@ -123,7 +123,9 @@ async def test_pwm(dut):
         # await Timer(1000, units='ps')
         # wait pwm level clock steps
         await ClockCycles(dut.wb_clk_i, 5)
-
+        # if (i > 150):
+        #     await FallingEdge(dut.clk)
+        #     if (io)
         # # assert still high
         # if (i != 0):
         #     assert(dut.read_data_1.value == data)

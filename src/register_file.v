@@ -9,7 +9,7 @@ module register_file (
     input wire clk, reset
     );
     integer i;
-    reg [31:0]reg_file[31:0];
+    reg [31:0]reg_file[16:0];
 
     // initial reg_file[0] = 0;
     assign read_data_1 = reg_file[address_1];
@@ -35,7 +35,7 @@ module register_file (
     // end
     always @(negedge clk) begin
     	if (reset) begin
-            for (i = 0; i < 32; i = i + 1) begin
+            for (i = 0; i < 16; i = i + 1) begin
                 reg_file[i] = 32'b0;
             end
         end else if (address_3 && write_enable)

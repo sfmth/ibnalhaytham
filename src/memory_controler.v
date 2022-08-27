@@ -181,6 +181,11 @@ module memory_controler (
     // assign rambus_wb_sel_o = 4'hF;
     // assign rambus_wb_clk_o = (io_in[1:0] == 2'd1) ? clk : 1'b0;
     // assign rambus_wb_rst_o = (io_in[1:0] == 2'd1) ? reset : 1'b0;
+    // always @(posedge clk) begin
+    //     if (io_in[1:0] == 2'd1) begin
+        
+    // end
+
     reg [31:0] inst_mem_addr_1;
     // always @(negedge clk) begin // detect new request
     //     if (io_in[1:0] == 2'd1) begin

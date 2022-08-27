@@ -3,7 +3,7 @@
     `define MPRJ_IO_PADS 38    
 // `endif
 
-// `include "/home/farhad/Projects/rv32i_tapeout/src/ibnalhaytham.v"
+//`include "/home/farhad/Projects/rv32i_tapeout/src/ibnalhaytham.v"
 
 // `define USE_WB  1
 `define USE_LA  1
@@ -183,8 +183,8 @@ module wrapped_ibnalhaytham(
         buf_la1_data_out,
         la1_oenb, 
 
-        io_in[16:10],           // in to your project
-        buf_io_out[30:10],          // out from your project
+        io_in[14:8],           // in to your project
+        buf_io_out[35:15],          // out from your project
 
         user_clock2
 
