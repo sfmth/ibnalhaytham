@@ -1,5 +1,5 @@
 # Set the following parameters for your project:
-NAM = memory_controler
+NAM = wrapped_ibnalhaytham
 # In this example we have a verilog file at verilog/pwm.v
 # FILE is the address to your main verilog file
 FILE = src/$(NAM)
@@ -13,7 +13,7 @@ TOPLEVEL = $(NAM)
 # MODULE is the basename of the Python test file
 MODULE = test.test_$(NAM)
 
-SINGLE = True
+SINGLE = rue
 
 IGNORE = 'memory.v'
 
@@ -65,3 +65,6 @@ gtkwave_good:
 delete:
 	rm -rf sim_build/ test/__pycache__/ $(PREFIX).vcd results.xml properties/
 	rm show_synth/*
+
+test_fin:
+	make delete; make
