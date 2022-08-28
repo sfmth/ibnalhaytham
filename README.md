@@ -1,4 +1,5 @@
 # The Ibnalhaytham CPU
+Please note that this is not the tapeout repository, to see the tapeout files visit https://github.com/sfmth/wrapped_ibnalhaytham
 ### Naming criteria:
 This project was named after the great arabic scientist Ibn al-haytham to honor his contributions to science, his most important work is the Kitab al-Manazir (Book of Optics). In the 11th century he managed to pioneer significant contributions in the field of optics and has been referred to as "the father of modern optics". 
 
@@ -42,11 +43,25 @@ The processor module adds support for a stall signal that can stall instruction 
 <p align="center" float="center">
   <img src="docs/memory_controler.jpg" width="700"/>
 </p>
-what it does
-signals
+This module takes care of memory requests made by the processor, it has a small data memory which consists of 8 normal words and 2 wrods with custom addresses 'd96 and 'd100. The data memory always gets outputted into io_out, a counter counts the address and outputs both the address and it's data to io_out. 
+
+The memory controller module also interfaces with the second bank of the logic analyzer available in caravel wrapper. When io_in[1:0] equals 'd3 the memory controller uses la1 as the instruction memory and caravel CPU is going to handle the requests made by memory controller. when io_in[1:0] isn't 'd3 then memory controller connects the data memory to la1 and we would be able to read the data memory by providing an address from caravel CPU.
+
 ## Test it yourself
+You should be able to run the simulation by running the following command:
+
+```
+make delete; make test_fin; make gtkwave
+```
+
+What it does is that it uses test/test_wrapped_ibnalhaytham.py as a cocotb test module alongside verilog and then opens gtkwave to view the resulting signals.
+
+You can also simulate this project inside caravel, the test files are provided in the tapeout repository: https://github.com/sfmth/wrapped_ibnalhaytham
 
 ## Final GDS
+<p align="center" float="center">
+  <img src="docs/layout.png" />
+</p>
 
 ## TODO
 - use smaller memory and register addresses
