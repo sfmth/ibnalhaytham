@@ -1,6 +1,12 @@
 `default_nettype none
 `timescale 1ns/1ns
 
+/* 
+This module is used in the decode stage of the processor and decodes the fetched instruction to generate appropriate
+control signals for different parts of the processor.
+*/
+
+
 // alu_control signal values
 `define ALU_CONTROL_ADD   5'd0
 `define ALU_CONTROL_SUB   5'd1
@@ -23,29 +29,26 @@
 
 
 module control_unit (
-    input wire [6:0] op,
-    input wire [2:0] funct3,
-    input wire funct7_5,
-    output reg reg_write, // write to register. instructions with rd
-            mem_write, // write to memory. S type
-            jump, // jal
-            branch, // beq
-            alu_src, // 0 when using a register as src_b
-    output reg [1:0] result_src, // 01 for S type, 10 for jal
-            imm_src, // 00 for type I, 01 for type S, 10 for type B, 11 for jal
-    output reg [4:0] alu_control
+    input wire [6:0] op, // bits [6:0] from the fetched instruction
+    input wire [2:0] funct3, // bits [14:12] from the fetched instruction
+    input wire funct7_5, // bit 30 from the fetched instruction
+    output reg reg_write, // register write enable used for instructions with a destination register rd
+            mem_write, // data memory write enable used for S type instructions
+            jump, // detects jal instruction
+            branch, // detects beq instruction
+            alu_src, // used as a select signal for src_b of the alu module that chooses between register 2 (rs2) and the extend module's output
+			// it is 0 when we want rs2 as the source or 1 when we want the
+			// extended signal as the src_b for the ALU
+    output reg [1:0] result_src, // selects the output of the writeback stage: 01 for lw instruction, 10 for jal instruction and 00 for other instructions
+            imm_src, // control signal for the extend module: 00 for type I, 01 for type S, 10 for type B, 11 for jal
+    output reg [4:0] alu_control // ALU control signal
     // input wire [127:0] inst,
     // input wire clk
     );
     
-    //RegWrite, ImmSrc, ALUSrc, MemWrite, ResultSrc, Branch, ALUOp, Jump}
+    reg [1:0] alu_op; // decoded ALU information from OP code
 
-    reg [1:0] alu_op;
-
-    // initial begin
-    //     jump = 0;
-    //     branch = 0;
-    // end
+	// main decoder
     always @(*) begin
         case (op)
             `OP_LW: begin // 1_00_1_0_01_0_00_0;
@@ -121,8 +124,8 @@ module control_unit (
         endcase
     end
 
-    wire r_type_sub;
-    assign r_type_sub = funct7_5 & op[5];
+    wire r_type_sub; // a signal to differentiate between add and sub instructions since their funct3 is identical
+    assign r_type_sub = funct7_5 & op[5]; 
 
     always @(*) begin
         case(alu_op)
@@ -130,19 +133,20 @@ module control_unit (
             2'b01: alu_control = `ALU_CONTROL_SUB; // subtraction
             default: case(funct3) // R–type or I–type ALU
                         3'b000: if (r_type_sub)
-                                alu_control = `ALU_CONTROL_SUB; // sub
-                            else
-                                alu_control = `ALU_CONTROL_ADD; // add, addi
+									alu_control = `ALU_CONTROL_SUB; // sub
+								else
+									alu_control = `ALU_CONTROL_ADD; // add, addi
                         3'b010: alu_control = `ALU_CONTROL_SLT; // slt, slti
                         3'b110: alu_control = `ALU_CONTROL_OR; // or, ori
                         3'b111: alu_control = `ALU_CONTROL_AND; // and, andi
                         default: alu_control = 5'b0; // ???
                      endcase
         endcase
-       
     end
 
 
+
+	// The following code is used for verification and tests
     // `ifdef FORMAL
     //     initial assume(reset);
     //     // initial assume(reg_file[0] == 32'b0);

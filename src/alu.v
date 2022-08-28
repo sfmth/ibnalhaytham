@@ -1,6 +1,10 @@
 `default_nettype none
 `timescale 1ns/1ns
 
+/* 
+This module is used in the execution stage of the processor and performs arithmetic operations on it's sources. 
+*/
+
 // alu_control signal values
 `define ALU_CONTROL_ADD   5'd0
 `define ALU_CONTROL_SUB   5'd1
@@ -14,18 +18,19 @@
 `define ALU_CONTROL_SRA   5'd9
 
 module alu (
-    input wire [31:0] src_a, src_b,
-    input wire [4:0] alu_control,
-    output reg [31:0] alu_result,
-    output wire zero
-    // input wire clk
+    input wire [31:0] src_a, src_b, // operands
+    input wire [4:0] alu_control, // control signal coming from the control unit
+    output reg [31:0] alu_result, // result
+    output wire zero // will be "1" when alu_result is "0", it is used for detecting conditional branches
     );
 
-    assign zero = (alu_result) ? 1'b0 : 1'b1;
-
+    assign zero = (alu_result) ? 1'b0 : 1'b1; // will be "1" when alu_result is "0", it is used for detecting conditional branches
+	
+	// decode the alu_control signal and perform the appropriate operation
     always @(*) begin
         case (alu_control)
-            `ALU_CONTROL_ADD:   alu_result = src_a + src_b;                                            // ADD
+			// Control signal:               Operation:                                                Instruction:  
+            `ALU_CONTROL_ADD:   alu_result = src_a + src_b;                                            // ADD 
             `ALU_CONTROL_SUB:   alu_result = src_a - src_b;                                            // SUB
             `ALU_CONTROL_SLT:   alu_result = ($signed(src_a) < $signed(src_b)) ? 32'b1 : 32'b0 ;       // SLT
             `ALU_CONTROL_SLTU:  alu_result = (src_a < src_b) ? 32'b1 : 32'b0;                          // SLTU
@@ -39,6 +44,7 @@ module alu (
         endcase
     end
 
+	// The following code is used for verification and tests
     // `ifdef FORMAL
     //     initial assume(reset);
     //     // initial assume(reg_file[0] == 32'b0);

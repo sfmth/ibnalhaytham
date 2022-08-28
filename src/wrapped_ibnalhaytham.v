@@ -1,4 +1,9 @@
 `default_nettype none
+
+/* 
+This module is used to wrap the design for the Zerotoasic course's multiproject submission. 
+*/
+
 // `ifdef FORMAL
     `define MPRJ_IO_PADS 38    
 // `endif
@@ -189,6 +194,11 @@ module wrapped_ibnalhaytham(
         user_clock2
 
     );
+
+
+
+
+	// The following code is used for verification and tests
     `ifdef COCOTB_SIM
     initial begin
     $dumpfile ("wrapped_ibnalhaytham.vcd");

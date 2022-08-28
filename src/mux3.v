@@ -1,6 +1,11 @@
 `default_nettype none
 `timescale 1ns/1ns
 
+/* 
+This module is just a 3 input multiplexer used in wiring the processor
+*/
+
+
 module mux3 (
     input wire [31:0] first, second, third,
     input wire [1:0] select,
@@ -16,6 +21,8 @@ module mux3 (
         endcase
     end
     
+
+	// The following code is used for verification and tests
     // `ifdef FORMAL
     //     initial assume(reset);
     //     // initial assume(reg_file[0] == 32'b0);

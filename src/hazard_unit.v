@@ -1,18 +1,22 @@
 `default_nettype none
 `timescale 1ns/1ns
 
-
+/* 
+This module is used alongside the processor and takes care of pipeline hazards. 
+It is also tasked with resetting the processor by flushing the pipeline
+*/
 
 module hazard_unit (
     input wire reg_write_m, reg_write_w, result_src_e_0, pc_src_e,
-    input wire [4:0] rs1_e, rs1_d, rs2_e, rs2_d, rd_e, rd_m, rd_w,
-    output wire stall_f, stall_d, flush_d, flush_e,
-    output reg [1:0] forward_a_e, forward_b_e,
-    output wire flush_f, flush_m, flush_w,
-    input wire reset
+    input wire [4:0] rs1_e, rs1_d, rs2_e, rs2_d, rd_e, rd_m, rd_w, // forwarded register addresses to detect and manage hazards
+    output wire stall_f, stall_d, flush_d, flush_e, // stall and flush signals for different pipeline stages
+    output reg [1:0] forward_a_e, forward_b_e, // forward ALU sources from different stages of the pipeline to solve hazards
+    output wire flush_f, flush_m, flush_w, // additional flush signals for resetting the processor
+    input wire reset // reset
     // input wire clk
     );
-
+	
+	// wire to detect the need for lw stall
     wire lwstall;
 
     always @(*) begin
@@ -48,6 +52,13 @@ module hazard_unit (
     assign flush_f = reset;
     assign flush_m = reset;
     assign flush_w = reset;
+
+
+
+
+
+
+	// The following code is used for verification and tests
     // `ifdef FORMAL
     //     initial assume(reset);
     //     // initial assume(reg_file[0] == 32'b0);
