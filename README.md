@@ -61,8 +61,14 @@ By assigning True the variable SINGLE in the makefile you can test out individua
 You can also simulate this project inside caravel, the test files are provided in the tapeout repository: https://github.com/sfmth/wrapped_ibnalhaytham
 
 ## Final GDS
+Design area 553.84um X 552.16um (296273 um^2).
 <p align="center" float="center">
   <img src="docs/layout.png" />
+</p>
+
+Group submission GDS:
+<p align="center" float="center">
+  <img src="docs/multi_macro_annotated-2.png" />
 </p>
 
 ## TODO
